@@ -21,4 +21,63 @@
     @apply font-o9Sans;
     @apply text-base;
   }
+  /* TYPOGRAPHY */
+  h1 {
+    @apply text-l;
+    @apply font-o9Sans-light;
+    @apply leading-[90%];
+    @apply tracking-[-2.24px];
+    @apply tablet:text-xl;
+    @apply tablet:tracking-[-3.2px];
+    @apply desktopL:text-xxl;
+    @apply desktopL:tracking-[-5.72px];
+  }
+  h2 {
+    @apply text-lm;
+    @apply font-[400];
+    @apply tracking-[-0.72px];
+    @apply tablet:text-[64px];
+    @apply tablet:tracking-[-1.28px];
+    @apply desktop:text-l;
+    @apply desktop:leading-[95%];
+    @apply desktop:tracking-[-1.96px];
+    @apply desktopL:text-[64px];
+    @apply desktopL:leading-[100%];
+    @apply desktopL:tracking-[-1.28px];
+  }
+  h3 {
+    @apply text-xm;
+    @apply leading-[110%];
+    @apply tracking-[-0.16px];
+    @apply tablet:text-m;
+    @apply tablet:tracking-[-0.2px];
+    @apply desktopL:tracking-[-0.6px];
+  }
+  h4 {
+    @apply text-xxm;
+    @apply leading-[120%];
+    @apply tablet:text-[28px];
+    @apply tablet:leading-[110%];
+    @apply tablet:tracking-[-0.14px];
+    @apply desktop:text-xxm;
+    @apply desktop:leading-[110%];
+    @apply desktop:tracking-[-0.12px];
+    @apply desktopL:text-[28px];
+    @apply desktopL:leading-[110%];
+    @apply desktopL:tracking-[-0.42px];
+  }
+  h5 {
+    @apply text-s;
+    @apply leading-[110%];
+    @apply tablet:text-xxm;
+    @apply tablet:leading-[110%];
+    @apply tablet:tracking-[-0.12px];
+    @apply desktop:text-xm;
+    @apply desktop:leading-[100%];
+    @apply desktop:tracking-[-0.96px];
+    @apply desktopL:text-m;
+    @apply desktopL:tracking-[-1.2px];
+  }
+  p {
+  }
 }
