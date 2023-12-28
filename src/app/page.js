@@ -1,8 +1,9 @@
-import { Container } from '@/components';
+import { Container, Header } from '@/components';
 
 export default function Home() {
   return (
     <Container>
+      <Header />
       <h1>this is h1</h1>
       <h2>this is h2</h2>
       <h3>this is h3</h3>
