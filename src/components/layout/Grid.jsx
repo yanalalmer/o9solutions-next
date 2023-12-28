@@ -1,4 +1,5 @@
 'use client';
+import { Loading } from '@/components';
 import { useGetData } from '@/hooks';
 import { useRecoilValue } from 'recoil';
 import { agendaState, loadingState, errorState, filterState } from '@/state';
@@ -11,7 +12,7 @@ export const Grid = () => {
   const filter = useRecoilValue(filterState);
 
   if (loading || !data) {
-    return <h1>loading....</h1>;
+    return <Loading />;
   }
   if (error) {
     return <div>Error: {error.message}</div>;
