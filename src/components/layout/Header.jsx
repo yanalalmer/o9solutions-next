@@ -1,7 +1,7 @@
 'use client';
 
 import { ToggleButton } from '@/components';
-import { useGetData } from '@/hooks/useGetData';
+import { useGetData } from '@/hooks';
 
 export const Header = () => {
   useGetData();
