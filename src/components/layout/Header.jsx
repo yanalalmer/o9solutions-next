@@ -1,3 +1,5 @@
+import { ToggleButton } from '@/components';
+
 export const Header = () => {
   return (
     <header className='py-18 mobile:py-0 mobile:mb-12 tablet:mb-18 desktop:flex desktop:justify-between desktop:items-end desktop:mb-28 desktopL:mb-36'>
@@ -7,7 +9,7 @@ export const Header = () => {
         </p>
         <h1 className='mb-8 tablet:mb-14 desktop:mb-0 uppercase'>agenda</h1>
       </div>
-      <div>toggle button</div>
+      <ToggleButton />
       <div className='hidden desktop:block leading-[135%]'>
         <span className='block text-right'>Timezone: Europe/</span>
         <span className='block text-right'>Amsterdam</span>
