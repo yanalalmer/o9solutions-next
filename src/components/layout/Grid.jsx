@@ -36,6 +36,9 @@ export const Grid = () => {
               initial='initial'
               animate='animate'
               exit='exit'
+              className={`${
+                block.attrs.speakerList.length > 3 ? 'desktop:col-span-2' : ''
+              }`}
             >
               <Card block={block} />
             </motion.div>
