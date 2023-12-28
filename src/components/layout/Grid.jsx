@@ -1,5 +1,10 @@
 'use client';
+// animations
+import { AnimatePresence, motion } from 'framer-motion';
+import { slideIn } from '@/styles/animations';
+// components
 import { Loading, Card } from '@/components';
+// state
 import { useGetData } from '@/hooks';
 import { useRecoilValue } from 'recoil';
 import { agendaState, loadingState, errorState, filterState } from '@/state';
@@ -23,11 +28,19 @@ export const Grid = () => {
   return (
     <>
       <div className='gap-6 grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 desktopL:grid-cols-4'>
-        {filteredInnerBlocks.map((block, index) => (
-          <div key={index}>
-            <Card block={block} />
-          </div>
-        ))}
+        <AnimatePresence>
+          {filteredInnerBlocks.map((block, index) => (
+            <motion.div
+              key={index}
+              variants={slideIn}
+              initial='initial'
+              animate='animate'
+              exit='exit'
+            >
+              <Card block={block} />
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
     </>
   );

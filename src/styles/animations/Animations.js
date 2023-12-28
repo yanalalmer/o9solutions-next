@@ -8,3 +8,8 @@ export const pop = {
   animate: { scale: 1.03 },
   exit: { scale: 1 },
 };
+export const slideIn = {
+  initial: { opacity: 0, y: -100 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -100 },
+};
