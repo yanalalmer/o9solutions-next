@@ -1,8 +1,9 @@
 'use client';
-import React from 'react';
+import { filterState } from '@/state';
+import { useRecoilState } from 'recoil';
 
 export const ToggleButton = () => {
-  const [filter, setFilter] = React.useState('Day 1');
+  const [filter, setFilter] = useRecoilState(filterState);
 
   const toggleFilter = () => {
     if (filter === 'Day 1') {
@@ -11,7 +12,6 @@ export const ToggleButton = () => {
       setFilter('Day 1');
     }
   };
-  console.log(filter);
   return (
     <>
       <div

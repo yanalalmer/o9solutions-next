@@ -1,4 +1,5 @@
 import '@/styles/globals.css';
+import RecoilRootWrapper from './RecoilRootWrapper';
 
 export const metadata = {
   title: 'o9 Solutions',
@@ -8,7 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <RecoilRootWrapper>
+        <body>{children}</body>
+      </RecoilRootWrapper>
     </html>
   );
 }
