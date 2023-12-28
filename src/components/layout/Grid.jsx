@@ -1,5 +1,5 @@
 'use client';
-import { Loading } from '@/components';
+import { Loading, Card } from '@/components';
 import { useGetData } from '@/hooks';
 import { useRecoilValue } from 'recoil';
 import { agendaState, loadingState, errorState, filterState } from '@/state';
@@ -24,7 +24,9 @@ export const Grid = () => {
     <>
       <div className='gap-6 grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 desktopL:grid-cols-4'>
         {filteredInnerBlocks.map((block, index) => (
-          <div key={index}>{block.attrs.title}</div>
+          <div key={index}>
+            <Card block={block} />
+          </div>
         ))}
       </div>
     </>

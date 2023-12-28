@@ -5,3 +5,4 @@ export * from './layout/Grid';
 export * from './layout/Loading';
 // global
 export * from './global/buttons/ToggleButton';
+export * from './global/cards/Card';
