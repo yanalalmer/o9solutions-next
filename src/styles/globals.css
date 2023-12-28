@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'o9Sans';
+  src: url('/fonts/o9Sans-Regular-Web.ttf');
+}
+@font-face {
+  font-family: 'o9Sans-bold';
+  src: url('/fonts/o9Sans-Bold-Web.woff2');
+}
+@font-face {
+  font-family: 'o9Sans-light';
+  src: url('/fonts/o9Sans-Light-Web.woff2');
+}
+
+@layer base {
+  body {
+    @apply bg-background;
+    @apply font-o9Sans;
+    @apply text-base;
+  }
+}
