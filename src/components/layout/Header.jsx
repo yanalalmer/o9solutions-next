@@ -1,6 +1,10 @@
+'use client';
+
 import { ToggleButton } from '@/components';
+import { useGetData } from '@/hooks/useGetData';
 
 export const Header = () => {
+  useGetData();
   return (
     <header className='py-18 mobile:py-0 mobile:mb-12 tablet:mb-18 desktop:flex desktop:justify-between desktop:items-end desktop:mb-28 desktopL:mb-36'>
       <div>
