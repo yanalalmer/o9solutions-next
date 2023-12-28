@@ -43,6 +43,12 @@ module.exports = {
         cardBackgroundDark: '#CACACA',
         neon: '#D7FE51',
       },
+      padding: {
+        18: '72px',
+      },
+      margin: {
+        18: '72px',
+      },
     },
   },
   plugins: [],
