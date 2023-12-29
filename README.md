@@ -40,7 +40,7 @@ I adapted Next.js best practices, such as SSR where beneficial, File-Based Routi
 
 List of contriubutors:
 
-- [Yanal Almir](yanal.nl)
+- [Yanal Almir](https://yanal.nl/)
 
 ## License
 
