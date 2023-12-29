@@ -13,3 +13,8 @@ export const slideIn = {
   animate: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: -100 },
 };
+export const background = {
+  initial: { height: 0 },
+  animate: { height: '100%' },
+  exit: { height: 0 },
+};

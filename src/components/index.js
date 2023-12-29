@@ -8,3 +8,4 @@ export * from './global/buttons/TagButton';
 export * from './global/buttons/ToggleButton';
 export * from './global/buttons/MoreButton';
 export * from './global/cards/Card';
+export * from './global/cards/FeaturedCard';
