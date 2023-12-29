@@ -8,15 +8,18 @@ import { pop, rotate } from '@/styles/animations';
 import { TagButton, MoreButton } from '@/components';
 // utils
 import { formatTime } from '@/utils';
+import { useModal } from '@/hooks';
 
 export const Card = ({ block }) => {
   const { startTime, title, speakerList, category } = block.attrs;
+  const { toggleModal } = useModal();
   return (
     <AnimatePresence>
       <motion.div
         className='bg-cardBackground p-4 tablet:p-6 self-stretch h-full desktop:cursor-pointer hover:scale-[1.03] transition-all duration-300'
         whileHover='animate'
         initial='initial'
+        onClick={toggleModal}
       >
         <header className='w-full flex justify-between desktopL:justify-start items-center mb-10'>
           <TagButton content={formatTime(startTime)} />
@@ -31,7 +34,7 @@ export const Card = ({ block }) => {
           </motion.div>
         </header>
         <h4 className='mb-8'>{title}</h4>
-        <div className='mb-10 desktop:hidden'>
+        <div className='mb-10 desktop:hidden' onClick={toggleModal}>
           <MoreButton text='learn more' icon={<RightArrowIcon />} />
         </div>
         <section className='flex gap-2 overflow-x-auto no-scrollbar scroll whitespace-nowrap scroll-smooth cursor-grab desktop:cursor-pointer'>

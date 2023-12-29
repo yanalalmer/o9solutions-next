@@ -3,11 +3,17 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { slideIn } from '@/styles/animations';
 // components
-import { Loading, Card, FeaturedCard } from '@/components';
+import { Loading, Card, FeaturedCard, Modal } from '@/components';
 // state
 import { useGetData } from '@/hooks';
 import { useRecoilValue } from 'recoil';
-import { agendaState, loadingState, errorState, filterState } from '@/state';
+import {
+  agendaState,
+  loadingState,
+  errorState,
+  filterState,
+  modalState,
+} from '@/state';
 import React from 'react';
 
 export const Grid = () => {
@@ -16,6 +22,7 @@ export const Grid = () => {
   const loading = useRecoilValue(loadingState);
   const error = useRecoilValue(errorState);
   const filter = useRecoilValue(filterState);
+  const modal = useRecoilValue(modalState);
 
   if (loading || !data) {
     return <Loading />;
@@ -28,6 +35,7 @@ export const Grid = () => {
   );
   return (
     <>
+      {modal && <Modal />}
       <div className='gap-6 grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 desktopL:grid-cols-4'>
         <AnimatePresence>
           {filteredInnerBlocks.map((block, index) => (
