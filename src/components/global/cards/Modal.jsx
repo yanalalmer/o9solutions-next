@@ -9,19 +9,19 @@ export const Modal = () => {
   const { toggleModal } = useModal();
 
   return (
-    <div className='fixed top-0 left-0 right-0 bottom-0 bg-black/[0.7] flex justify-center items-center z-30'>
+    <div className='fixed top-0 left-0 right-0 bottom-0 bg-black/[0.7] flex justify-center items-center z-30 flex-shrink-0'>
       <motion.div
-        className='bg-background p-4 tablet:p-12 relative w-[50%] h-fit'
+        className='bg-background p-4 tablet:p-12 relative w-full h-full overflow-auto desktop:w-[50%] desktop:h-fit'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <div className='flex items-center justify-between mb-4'>
+        <header className='flex items-center justify-between mb-4'>
           <TagButton content={'13:30pm'} />
           <div onClick={toggleModal}>
             <MoreButton icon={<CloseIcon />} text='close' />
           </div>
-        </div>
+        </header>
         <div className='text-xxs'>Timezone: Europe/Amsterdam</div>
         <div className='mt-10'>
           <p className='uppercase mb-6'>Keynote</p>

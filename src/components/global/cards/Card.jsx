@@ -3,7 +3,7 @@
 import { ArrowIcon, RightArrowIcon } from '@/public/icons';
 // animations
 import { AnimatePresence, motion } from 'framer-motion';
-import { pop, rotate } from '@/styles/animations';
+import { rotate } from '@/styles/animations';
 // components
 import { TagButton, MoreButton } from '@/components';
 // utils

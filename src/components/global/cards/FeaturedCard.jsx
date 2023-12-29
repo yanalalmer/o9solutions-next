@@ -8,9 +8,11 @@ import { motion } from 'framer-motion';
 import { background, pop, rotate } from '@/styles/animations';
 // utils
 import { formatTime } from '@/utils';
+import { useModal } from '@/hooks';
 
 export const FeaturedCard = ({ block }) => {
   const { title, coverImage, startTime } = block.attrs;
+  const { toggleModal } = useModal();
   return (
     <motion.div
       className='group p-4 h-full tablet:p-6 self-stretch desktop:cursor-pointer hover:scale-[1.03] transition-all duration-300 relative'
@@ -22,6 +24,7 @@ export const FeaturedCard = ({ block }) => {
         backgroundPosition: 'top',
         backgroundRepeat: 'no-repeat',
       }}
+      onClick={toggleModal}
     >
       <motion.div
         className='desktop:bg-neon w-full h-full top-0 left-0 absolute'
