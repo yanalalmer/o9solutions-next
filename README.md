@@ -28,8 +28,8 @@ I used React, NextJs, Recoil, Tailwind and Framer Motion
 ## Setup
 
 - download or clone the repository.
-- run `npm install` or 'yarn add' to install all dependencies.
-- run `npm run dev` or `yarn run` to start the app.
+- run `npm install` or `yarn add` to install all dependencies.
+- run `npm run dev` or `yarn run dev` to start the app.
 - In your prefered browser, go to 'localhost:3000'.
 
 ## Approach
@@ -40,7 +40,7 @@ I adapted Next.js best practices, such as SSR where beneficial, File-Based Routi
 
 List of contriubutors:
 
-- [Yanal ALmir](yanal.nl)
+- [Yanal Almir](yanal.nl)
 
 ## License
 
